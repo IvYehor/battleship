@@ -90,6 +90,13 @@ void Renderer::drawTitle() {
 	printMsg(0, 7, "                                                                            |_|    ");
 }
 
+void Renderer::drawInstructions() {
+	drawBox(-1, -1, 30, 5, '-');
+	printMsg(0, 0, "Arrow UP/DOWN/LEFT/RIGHT");
+	printMsg(0, 1, "\t or hjkl to move");
+	printMsg(0, 2, "Enter to shoot and set fleet");
+}
+
 int Renderer::playerChoose(bool &choice) {
 	choice = false;
 	bool redraw = true;
@@ -112,6 +119,9 @@ int Renderer::playerChoose(bool &choice) {
 			setDrawPos(width/2-40, 2);
 			drawTitle();
 
+			setDrawPos(2, height-5);
+			drawInstructions();
+			
 			mvprintw(height/2, width/3, "Server");
 			if(!choice)
 				mvprintw(height/2+1, width/3, "  /\\");
@@ -179,6 +189,9 @@ int Renderer::waitingForClient(const bool &accepted) {
 			drawRandomChars(width-2, height-2, 50, waterSeed, '~');
 			attroff(COLOR_PAIR(1));
 
+			setDrawPos(width/2-40, 2);
+			drawTitle();
+
 			mvprintw(height/2, width/2-10, "Waiting for client...");
 			refresh();
 			redraw = false;
@@ -198,6 +211,9 @@ int Renderer::enterIpAddress(std::string &ip) {
 	clear();
 	wborder(stdscr, '-', '-', '-', '-', '-', '-', '-', '-');
 	
+	setDrawPos(width/2-40, 2);
+	drawTitle();
+
 	setDrawPos(1, 1);
 	attron(COLOR_PAIR(1));
 	drawRandomChars(width-2, height-2, 50, waterSeed, '~');
@@ -224,6 +240,9 @@ int Renderer::enterName(std::string &name) {
 	clear();
 	border('-', '-', '-', '-', '-', '-', '-', '-');
 	
+	setDrawPos(width/2-40, 2);
+	drawTitle();
+
 	setDrawPos(1, 1);
 	attron(COLOR_PAIR(1));
 	drawRandomChars(width-2, height-2, 50, waterSeed, '~');

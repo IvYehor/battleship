@@ -40,6 +40,7 @@ private:
 	void drawChar(int x, int y, char ch);
 	void printMsg(int x, int y, std::string msg);
 	void drawTitle();
+	void drawInstructions(); 
 
 	bool finished;
 	int width, height;
