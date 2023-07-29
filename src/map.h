@@ -19,8 +19,10 @@ struct MapC {
 	
 	// Number of ships of size 2 to 5
 	// The zeroth ship has the size of 2
-	static std::vector<int> FLEET;
+	static const std::vector<int> FLEET;
 };
+
+inline const std::vector<int> MapC::FLEET{2, 2, 1, 0};
 
 class MyMap {
 public:	
