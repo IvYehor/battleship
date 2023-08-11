@@ -1,12 +1,12 @@
-## Battleship
+# Battleship
 
 A Battleship is an open-source two-player CLI game written in C++ with the use of ASIO framework. 
 
-# Contributing
+## Contributing
 
 You are welcome to contribute by creating issues.
 
-# Build
+## Build
 
 The game uses ncurses library for rendering so it should be installed on your machine before compiling the program:
 
