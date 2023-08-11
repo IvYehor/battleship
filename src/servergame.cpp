@@ -64,7 +64,7 @@ int ServerGame::setFleet() {
 	
 	theirMap = TheirMap();
 
-	Message<bool> readyMSGTheir{};
+	/*Message<bool> readyMSGTheir{};
 	if(server.ReadPOD(readyMSGTheir) == -1 || !readyMSGTheir.data) {
 		server.Stop();
 		renderer.errorScreen();
@@ -76,7 +76,7 @@ int ServerGame::setFleet() {
 		server.Stop();
 		renderer.errorScreen();
 		return -1;
-	}
+	}*/
 
 	return 0;
 }

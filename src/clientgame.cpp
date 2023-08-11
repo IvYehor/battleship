@@ -67,7 +67,7 @@ int ClientGame::setFleet() {
 	
 	theirMap = TheirMap();
 
-	Message<bool> readyMSG{true, sizeof(bool)};
+	/*Message<bool> readyMSG{true, sizeof(bool)};
 	if(client.WritePOD(readyMSG) == -1) {
 		client.Stop();
 		renderer.errorScreen();
@@ -79,7 +79,7 @@ int ClientGame::setFleet() {
 		client.Stop();
 		renderer.errorScreen();
 		return -1;
-	}
+	}*/
 
 
 	return 0;
